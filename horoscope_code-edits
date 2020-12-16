@@ -1,1 +1,72 @@
-//Horoscope code goes here
+//Horoscope code below
+
+using System;
+
+namespace Horoscope_Guesser
+{
+    class Horoscopes
+    {
+        public string Guess(string month, int date)
+        {
+            string horoscope = " ";
+            if(month == "March" && date > 20 || month == "April" && date < 20)
+                horoscope = "You're an Aries";
+            else if(month == "April" && date > 19 || month == "May" && date < 21)
+                horoscope = "You're a Taurus";
+            else if(month == "May" && date > 20 || month == "June" && date < 21)
+                horoscope = "You're a Gemini";
+            else if(month == "June" && date > 20 || month == "July" && date < 23)
+                horoscope = "You're a Cancer";
+            else if(month == "July" && date > 22 || month == "August" && date < 23)
+                horoscope = "You're a Leo";
+            else if(month == "August" && date > 22 || month == "September" && date < 23)
+                horoscope = "You're a Virgo";
+            else if(month == "September" && date > 22 || month == "October" && date < 23)
+                horoscope = "You're a Libra";
+            else if(month == "October" && date > 22 || month == "November" && date < 22)
+                horoscope = "You're a Scorpio";
+            else if(month == "November" && date > 21 || month == "December" && date < 22)
+                horoscope = "You're a Sagittarius";
+            else if(month == "December" && date > 21 || month == "January" && date < 20)
+                horoscope = "You're a Capricorn";
+            else if(month == "January" && date > 19 || month == "Feburary" && date < 19)
+                horoscope = "You're an Aquarius";
+            else if(month == "Feburary" && date > 18 || month == "March" && date < 21)
+                horoscope = "You're a Pisces"; 
+            else
+               horoscope = "Invalid input please try again";               
+            
+            return horoscope;
+            
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Horoscopes h = new Horoscopes();
+            Console.WriteLine();
+            Console.WriteLine(h.Guess("December", 24));
+
+            Console.WriteLine();
+            Console.WriteLine(h.Guess("March", 15));
+
+            Console.WriteLine();
+            Console.WriteLine(h.Guess("March", 24));
+
+            Console.WriteLine();
+            Console.WriteLine(h.Guess("June", 23));
+
+            Console.WriteLine();
+            Console.WriteLine(h.Guess("Dec", 24));
+
+            Console.WriteLine();
+            Console.WriteLine(h.Guess("January", 20));
+
+            Console.WriteLine();
+            Console.WriteLine(h.Guess("January", 19));
+
+        }
+    }
+}
+
